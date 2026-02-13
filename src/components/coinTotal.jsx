@@ -1,7 +1,7 @@
-import React from "react";
 import { coinTotal } from "../coinTotal";
+import {Text} from "react-native"
 
-export default function coinTotal({
+export function CoinTotal({
     nickels = 0,
     dimes = 0,
     quarters = 0,
@@ -9,6 +9,12 @@ export default function coinTotal({
     toonies = 0
 }) {
 
-    const total = cointTotal (nickels, dimes, quarters, loonies, toonies);
+    const total = coinTotal (nickels, dimes, quarters, loonies, toonies);
+
+    return(
+         <Text>
+            Coin total returned {total}
+        </Text>
+    )
 
 }
